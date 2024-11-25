@@ -1,0 +1,190 @@
+[gd_scene load_steps=13 format=3 uid="uid://bcw47vwo2ggno"]
+
+[ext_resource type="FontFile" uid="uid://chxgxgmykt35b" path="res://FONTS/static/OpenSans-ExtraBold.ttf" id="1_8kxou"]
+[ext_resource type="FontFile" uid="uid://co6vocgs3t13n" path="res://FONTS/static/OpenSans-Bold.ttf" id="2_viq66"]
+[ext_resource type="StyleBox" uid="uid://d2qa4he4v6ft8" path="res://cenas/styles/styleboxbuttom.tres" id="3_hlfie"]
+[ext_resource type="Script" path="res://cenas/optionbuttomsabor.gd" id="3_ryxsw"]
+[ext_resource type="StyleBox" uid="uid://dt35y8csb33ma" path="res://cenas/styles/pressed.tres" id="4_5p8h6"]
+[ext_resource type="StyleBox" uid="uid://b2715lk7jy11y" path="res://cenas/styles/hover.tres" id="5_wnx1f"]
+[ext_resource type="Script" path="res://cenas/gerarreceita.gd" id="6_2hrsk"]
+[ext_resource type="Texture2D" uid="uid://cdwayd3dxa8g5" path="res://assets/sublogo.png" id="8_jn16j"]
+
+[sub_resource type="Gradient" id="Gradient_x6q54"]
+offsets = PackedFloat32Array(0, 0.65, 1)
+colors = PackedColorArray(0.0588235, 0.0431373, 0, 1, 0.403922, 0.294118, 0.0470588, 1, 0.713726, 0.517647, 0.0745098, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_h44jf"]
+gradient = SubResource("Gradient_x6q54")
+fill_to = Vector2(1, 0.025641)
+
+[sub_resource type="GDScript" id="GDScript_64gf7"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_66wxd"]
+bg_color = Color(0.501961, 0.611765, 0.207843, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="bsbeer" type="Node2D"]
+
+[node name="fundo" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="fundo"]
+offset_right = 576.0
+offset_bottom = 1024.0
+
+[node name="UI" type="Node2D" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="UI"]
+offset_right = 576.0
+offset_bottom = 171.0
+texture = SubResource("GradientTexture2D_h44jf")
+
+[node name="Label" type="Label" parent="UI/TextureRect"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 46.0
+offset_right = 566.0
+offset_bottom = 129.0
+theme_override_fonts/font = ExtResource("1_8kxou")
+theme_override_font_sizes/font_size = 50
+text = "FAÇA SUA CERVEJA
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BOTOES" type="Node2D" parent="."]
+
+[node name="globals" type="Node2D" parent="."]
+
+[node name="UI2" type="Node2D" parent="."]
+script = SubResource("GDScript_64gf7")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UI2"]
+offset_left = 37.0
+offset_top = 227.0
+offset_right = 545.0
+offset_bottom = 1641.0
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI2/ScrollContainer"]
+custom_minimum_size = Vector2(500, 1000)
+layout_direction = 1
+layout_mode = 2
+focus_neighbor_left = NodePath("subtitle")
+focus_next = NodePath("subtitle2")
+focus_mode = 2
+
+[node name="subtitle" type="Panel" parent="UI2/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 60)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_66wxd")
+
+[node name="Como" type="Label" parent="UI2/ScrollContainer/VBoxContainer/subtitle"]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 9.0
+offset_right = 421.0
+offset_bottom = 51.0
+theme_override_fonts/font = ExtResource("2_viq66")
+theme_override_font_sizes/font_size = 30
+text = "Sabor Predominante"
+
+[node name="opcaosabor" type="OptionButton" parent="UI2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_viq66")
+theme_override_font_sizes/font_size = 24
+selected = 0
+item_count = 3
+popup/item_0/text = "Citrico"
+popup/item_1/text = "Amargo"
+popup/item_1/id = 1
+popup/item_2/text = "Adocicado"
+popup/item_2/id = 2
+script = ExtResource("3_ryxsw")
+
+[node name="subtitle2" type="Panel" parent="UI2/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 60)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_66wxd")
+
+[node name="Como" type="Label" parent="UI2/ScrollContainer/VBoxContainer/subtitle2"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 9.0
+offset_right = 439.0
+offset_bottom = 51.0
+theme_override_fonts/font = ExtResource("2_viq66")
+theme_override_font_sizes/font_size = 30
+text = "Processo"
+
+[node name="opcaoprocesso" type="OptionButton" parent="UI2/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_viq66")
+theme_override_font_sizes/font_size = 24
+selected = 0
+item_count = 2
+popup/item_0/text = "Alta Fermentação (ALE)"
+popup/item_1/text = "Baixa Fermentação( LAGER)"
+popup/item_1/id = 1
+
+[node name="subtitle" type="Panel" parent="UI2"]
+offset_left = 100.0
+offset_top = 140.0
+offset_right = 458.0
+offset_bottom = 205.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_66wxd")
+
+[node name="Como" type="Label" parent="UI2/subtitle"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 10.0
+offset_right = 311.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_viq66")
+theme_override_font_sizes/font_size = 30
+text = "Como vai querer?"
+
+[node name="textura" type="TextureRect" parent="UI2"]
+offset_left = -8.0
+offset_top = 901.0
+offset_right = 577.0
+offset_bottom = 1031.0
+texture = SubResource("GradientTexture2D_h44jf")
+
+[node name="gerarreceita" type="Button" parent="UI2/textura"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 1
+anchors_preset = -1
+offset_left = 167.0
+offset_top = -30.0
+offset_right = 412.0
+offset_bottom = 43.0
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_8kxou")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = ExtResource("3_hlfie")
+theme_override_styles/pressed = ExtResource("4_5p8h6")
+theme_override_styles/normal = ExtResource("5_wnx1f")
+text = "Gerar Receita"
+script = ExtResource("6_2hrsk")
+
+[node name="Sublogo" type="Sprite2D" parent="UI2"]
+position = Vector2(273, 1052)
+scale = Vector2(0.647814, 0.583482)
+texture = ExtResource("8_jn16j")
