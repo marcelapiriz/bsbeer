@@ -2,13 +2,13 @@
 
 [ext_resource type="FontFile" uid="uid://chxgxgmykt35b" path="res://FONTS/static/OpenSans-ExtraBold.ttf" id="1_3exp8"]
 [ext_resource type="FontFile" uid="uid://co6vocgs3t13n" path="res://FONTS/static/OpenSans-Bold.ttf" id="2_1718k"]
-[ext_resource type="Script" path="res://cenas/ingredientes.gd" id="3_b0af3"]
+[ext_resource type="Script" path="res://Scripts/ingredientes.gd" id="3_b0af3"]
 [ext_resource type="FontFile" uid="uid://bngcthtxqncpi" path="res://FONTS/static/OpenSans-Light.ttf" id="4_aw52m"]
 [ext_resource type="StyleBox" uid="uid://d2qa4he4v6ft8" path="res://cenas/styles/styleboxbuttom.tres" id="4_txok2"]
 [ext_resource type="StyleBox" uid="uid://dt35y8csb33ma" path="res://cenas/styles/pressed.tres" id="5_25for"]
-[ext_resource type="Script" path="res://cenas/observacao.gd" id="5_absyr"]
+[ext_resource type="Script" path="res://Scripts/observacao.gd" id="5_absyr"]
 [ext_resource type="StyleBox" uid="uid://b2715lk7jy11y" path="res://cenas/styles/hover.tres" id="6_q02w4"]
-[ext_resource type="Script" path="res://cenas/voltar.gd" id="7_jjmq4"]
+[ext_resource type="Script" path="res://Scripts/voltar.gd" id="7_jjmq4"]
 
 [sub_resource type="Gradient" id="Gradient_x6q54"]
 offsets = PackedFloat32Array(0, 0.65, 1)

@@ -2,13 +2,13 @@
 
 [ext_resource type="FontFile" uid="uid://chxgxgmykt35b" path="res://FONTS/static/OpenSans-ExtraBold.ttf" id="1_oqe0s"]
 [ext_resource type="Texture2D" uid="uid://cyqk2vcuqqnw4" path="res://assets/Cópia de Purple Modern Download App Instagram Story.png" id="1_pa83t"]
-[ext_resource type="Script" path="res://cenas/control.gd" id="2_10dkf"]
+[ext_resource type="Script" path="res://Scripts/control.gd" id="2_10dkf"]
 [ext_resource type="Texture2D" uid="uid://biyh08h51poyc" path="res://assets/logobsbeer.png" id="2_g3ufi"]
 [ext_resource type="StyleBox" uid="uid://d2qa4he4v6ft8" path="res://cenas/styles/styleboxbuttom.tres" id="2_s5t4k"]
 [ext_resource type="Texture2D" uid="uid://cdwayd3dxa8g5" path="res://assets/sublogo.png" id="3_6i3pk"]
 [ext_resource type="StyleBox" uid="uid://dt35y8csb33ma" path="res://cenas/styles/pressed.tres" id="3_vs51o"]
 [ext_resource type="StyleBox" uid="uid://b2715lk7jy11y" path="res://cenas/styles/hover.tres" id="3_xsw3k"]
-[ext_resource type="Script" path="res://cenas/botaoiniciar.gd" id="6_pv6qe"]
+[ext_resource type="Script" path="res://Scripts/botaoiniciar.gd" id="6_pv6qe"]
 
 [sub_resource type="Gradient" id="Gradient_x6q54"]
 offsets = PackedFloat32Array(0, 0.65, 1)

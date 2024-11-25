@@ -3,10 +3,10 @@
 [ext_resource type="FontFile" uid="uid://chxgxgmykt35b" path="res://FONTS/static/OpenSans-ExtraBold.ttf" id="1_8kxou"]
 [ext_resource type="FontFile" uid="uid://co6vocgs3t13n" path="res://FONTS/static/OpenSans-Bold.ttf" id="2_viq66"]
 [ext_resource type="StyleBox" uid="uid://d2qa4he4v6ft8" path="res://cenas/styles/styleboxbuttom.tres" id="3_hlfie"]
-[ext_resource type="Script" path="res://cenas/optionbuttomsabor.gd" id="3_ryxsw"]
+[ext_resource type="Script" path="res://Scripts/optionbuttomsabor.gd" id="3_ryxsw"]
 [ext_resource type="StyleBox" uid="uid://dt35y8csb33ma" path="res://cenas/styles/pressed.tres" id="4_5p8h6"]
 [ext_resource type="StyleBox" uid="uid://b2715lk7jy11y" path="res://cenas/styles/hover.tres" id="5_wnx1f"]
-[ext_resource type="Script" path="res://cenas/gerarreceita.gd" id="6_2hrsk"]
+[ext_resource type="Script" path="res://Scripts/gerarreceita.gd" id="6_2hrsk"]
 [ext_resource type="Texture2D" uid="uid://cdwayd3dxa8g5" path="res://assets/sublogo.png" id="8_jn16j"]
 
 [sub_resource type="Gradient" id="Gradient_x6q54"]
